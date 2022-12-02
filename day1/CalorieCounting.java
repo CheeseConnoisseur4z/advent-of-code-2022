@@ -9,7 +9,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class CalorieCounting
 {
     public static void main(String[] args) throws IOException {
-        List<String> lines = Files.readAllLines(Paths.get("C:\\Users\\tomsa\\git\\tom\\chess\\src\\main\\java\\tom\\adventOfCode\\day1\\calorie_counting_input.txt"));
+        List<String> lines = Files.readAllLines(Paths.get("calorie_counting_input.txt"));
 
         List<Integer> topCalories = new ArrayList<>(3);
         for (int i = 0; i < 3; i++) topCalories.add(0);
