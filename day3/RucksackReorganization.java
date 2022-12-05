@@ -33,9 +33,7 @@ public class RucksackReorganization
                 if (groupType.size() == 1) {
                     group = groupType.get(0);
                     if (!Character.isUpperCase(group)) total += group - 96;
-                    else {
-                        total += group - 38;
-                    }
+                    else total += group - 38;
                 }
             }
         }
