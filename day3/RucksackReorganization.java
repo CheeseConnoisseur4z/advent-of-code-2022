@@ -8,15 +8,16 @@ public class RucksackReorganization
 {
     public static void main(String[] args) throws IOException {
         List<String> lines = Files.readAllLines(Paths.get("rucksack_reorganization_input.txt"));
+        
         List<Character> charactersOfLine = new ArrayList<>();
         List<Character> groupType= new ArrayList<>();
+        
         int total = 0;
         int count = 2;
         char group;
 
         for (String line : lines) {
             count++;
-            
             if (count % 3 == 0) {
                 charactersOfLine.clear();
                 for (int i = 0; i < line.length(); i++) if (!charactersOfLine.contains(line.charAt(i))) 
