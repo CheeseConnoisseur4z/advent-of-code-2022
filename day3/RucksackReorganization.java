@@ -7,7 +7,7 @@ import java.util.List;
 public class RucksackReorganization
 {
     public static void main(String[] args) throws IOException {
-        List<String> lines = Files.readAllLines(Paths.get("C:\\Users\\tomsa\\git\\tom\\chess\\src\\main\\java\\tom\\adventOfCode\\day3\\rucksack_reorganization_input.txt"));
+        List<String> lines = Files.readAllLines(Paths.get("rucksack_reorganization_input.txt"));
         List<Character> charactersOfLine = new ArrayList<>();
         List<Character> groupType= new ArrayList<>();
         int total = 0;
@@ -19,15 +19,15 @@ public class RucksackReorganization
             
             if (count % 3 == 0) {
                 charactersOfLine.clear();
-                for (int i = 0; i < line.length(); i++) {
-                    if (!charactersOfLine.contains(line.charAt(i))) charactersOfLine.add(line.charAt(i));
+                for (int i = 0; i < line.length(); i++) if (!charactersOfLine.contains(line.charAt(i))) 
+                    charactersOfLine.add(line.charAt(i));
                 }
                 groupType = new ArrayList<>(charactersOfLine);
             } 
             else 
             {
-                for (Character character : charactersOfLine) {
-                    if (!line.contains(character + "")) groupType.remove(character);
+                for (Character character : charactersOfLine) if (!line.contains(character + "")) 
+                    groupType.remove(character);
                 }
                 if (groupType.size() == 1) {
                     group = groupType.get(0);
