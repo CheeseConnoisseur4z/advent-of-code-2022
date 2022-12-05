@@ -7,7 +7,7 @@ import java.util.List;
 public class CampCleanup
 {
     public static void main(String[] args) throws IOException {
-        List<String> lines = Files.readAllLines(Paths.get("C:\\Users\\tomsa\\git\\tom\\chess\\src\\main\\java\\tom\\adventOfCode\\day4\\camp_cleanup_input.txt"));
+        List<String> lines = Files.readAllLines(Paths.get("camp_cleanup_input.txt"));
 
         List<Integer> first = new ArrayList<>();
         List<Integer> second = new ArrayList<>();
