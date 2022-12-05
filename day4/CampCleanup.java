@@ -14,6 +14,7 @@ public class CampCleanup
 
         String[] split;
         int result = 0;
+        
         for (String line : lines) {
             split = line.split(",");
             addNumbers(split, 0, first);
